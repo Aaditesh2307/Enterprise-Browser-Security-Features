@@ -273,7 +273,9 @@ body {
 
 .video-container {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 var(--spacing-sm);
 }
 
 .video-wrapper {
@@ -284,12 +286,18 @@ body {
     border: 2px solid var(--glass-border);
     backdrop-filter: blur(10px);
     box-shadow: 0 16px 64px rgba(0, 212, 255, 0.2);
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 video {
     width: 100%;
     height: auto;
+    max-height: 80vh;
     display: block;
+    object-fit: contain;
 }
 
 .video-overlay {
@@ -648,5 +656,17 @@ video {
     
     .scroll-indicator p {
         display: block;
+    }
+    
+    .video-container {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .video-wrapper {
+        max-height: 70vh;
+    }
+    
+    video {
+        max-height: 70vh;
     }
 }
