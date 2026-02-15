@@ -3,132 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Resume - App Features</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            font-weight: 700;
-        }
-
-        .install-section {
-            margin-bottom: 40px;
-        }
-
-        .install-btn {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .install-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
-        }
-
-        .android-note {
-            color: #666;
-            font-size: 0.9em;
-            font-style: italic;
-            margin-top: 10px;
-        }
-
-        .video-section {
-            margin-top: 40px;
-        }
-
-        .video-title {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-
-        video {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .install-btn {
-                padding: 12px 25px;
-                font-size: 1.1em;
-            }
-
-            video {
-                max-width: 300px;
-            }
-        }
-    </style>
+    <title>Enterprise Browser Security Features | Chromium-Based Security</title>
+    <meta name="description" content="Advanced security features including domain blocking, copy/paste restrictions, upload/download controls, and keystroke obfuscation for enterprise browsers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Enterprise Browser Features</h1>
-        
-        <div class="install-section">
-            <a href="https://branch.wootz.app/ioq1EVW2nWb" class="install-btn" target="_blank">
-                📱 Install App to Check Features
-            </a>
-            <div class="android-note">
-                *This will only work on Android Mobile
+    <div class="particle-background" id="particles"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Enterprise Security</span><br>
+                    Features
+                </h1>
+                <p class="hero-subtitle">
+                    Advanced browser-level controls for comprehensive data protection and policy enforcement
+                </p>
+                <div class="hero-badges">
+                    <span class="badge">🚫 Domain Blocking</span>
+                    <span class="badge">📋 Copy/Paste Control</span>
+                    <span class="badge">📥 Upload/Download Blocking</span>
+                    <span class="badge">⌨️ Keystroke Obfuscation</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll to explore</p>
             </div>
         </div>
+    </section>
 
-        <div class="video-section">
-            <h2 class="video-title">App Demo</h2>
-            <video controls preload="metadata">
-                <source src="Screen_Recording_20250913_180446_WootzApp.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- Demo Video Section -->
+    <section class="section demo-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Live Demo</span>
+                <h2>See Security Features in Action</h2>
+                <p class="section-description">
+                    Watch how our enterprise browser enforces security policies in real-time
+                </p>
+            </div>
+            
+            <div class="video-container fade-up" style="--delay: 0.2s">
+                <div class="video-wrapper">
+                    <video id="demoVideo" controls preload="metadata" poster="">
+                        <source src="Screen_Recording_20250913_180446_WootzApp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <div class="play-button" id="playButton">
+                            <svg width="80" height="80" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="38" fill="rgba(0, 212, 255, 0.2)" stroke="var(--color-accent-primary)" stroke-width="2"/>
+                                <polygon points="32,25 32,55 55,40" fill="var(--color-accent-primary)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Security Features Section -->
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Core Features</span>
+                <h2>Chromium-Level Security Implementation</h2>
+                <p class="section-description">
+                    Deep integration into the browser codebase for robust, tamper-proof security
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Domain Blocking -->
+                <div class="feature-card fade-up" style="--delay: 0.1s">
+                    <div class="feature-header">
+                        <div class="feature-icon">🚫</div>
+                        <div class="feature-number">01</div>
+                    </div>
+                    <h3>Domain Blocking</h3>
+                    <p class="feature-description">
+                        Network-layer filtering prevents access to unauthorized domains with admin-controlled blocklists
+                    </p>
+                    
+                    <div class="implementation-details">
+                        <h4>Implementation</h4>
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span class="code-file">Network Layer</span>
+                                <span class="code-lang">Chromium Core</span>
+                            </div>
+                            <div class="code-content">
+                                <span class="code-comment">// Network layer filtering</span><br>
+                                <span class="code-keyword">if</span> (isDomainBlocked(url)) {<br>
+                                &nbsp;&nbsp;<span class="code-function">denyAccess</span>();<br>
+                                &nbsp;&nbsp;<span class="code-function">showPlaceholderPage</span>();<br>
+                                }
+                            </div>
+                        </div>
+                        <div class="tech-points">
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Admin-controlled via Okta SAML</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Placeholder page for blocked domains</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Network-level enforcement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Copy/Paste Blocking -->
+                <div class="feature-card fade-up" style="--delay: 0.2s">
+                    <div class="feature-header">
+                        <div class="feature-icon">📋</div>
+                        <div class="feature-number">02</div>
+                    </div>
+                    <h3>Copy/Paste Blocking</h3>
+                    <p class="feature-description">
+                        Prevents data exfiltration by blocking clipboard operations on sensitive domains
+                    </p>
+                    
+                    <div class="implementation-details">
+                        <h4>Implementation</h4>
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span class="code-file">web_contents_impl.cc</span>
+                                <span class="code-lang">C++</span>
+                            </div>
+                            <div class="code-content">
+                                <span class="code-comment">// Modified copy/paste functions</span><br>
+                                <span class="code-keyword">void</span> <span class="code-function">Copy</span>() {<br>
+                                &nbsp;&nbsp;<span class="code-keyword">if</span> (isDomainRestricted(currentUrl)) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span>; <span class="code-comment">// Block</span><br>
+                                &nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;performCopy();<br>
+                                }
+                            </div>
+                        </div>
+                        <div class="tech-points">
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Modified web_contents_impl.cc</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Domain-based filtering</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Prevents data exfiltration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Upload/Download Blocking -->
+                <div class="feature-card fade-up" style="--delay: 0.3s">
+                    <div class="feature-header">
+                        <div class="feature-icon">📥</div>
+                        <div class="feature-number">03</div>
+                    </div>
+                    <h3>Upload/Download Blocking</h3>
+                    <p class="feature-description">
+                        Restricts file operations to prevent unauthorized data transfer and malware downloads
+                    </p>
+                    
+                    <div class="implementation-details">
+                        <h4>Implementation</h4>
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span class="code-file">File Operations</span>
+                                <span class="code-lang">Chromium Core</span>
+                            </div>
+                            <div class="code-content">
+                                <span class="code-comment">// Upload/Download filtering</span><br>
+                                <span class="code-keyword">void</span> <span class="code-function">HandleFileOperation</span>() {<br>
+                                &nbsp;&nbsp;<span class="code-keyword">if</span> (isOperationBlocked(domain)) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-function">blockOperation</span>();<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span>;<br>
+                                &nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;allowOperation();<br>
+                                }
+                            </div>
+                        </div>
+                        <div class="tech-points">
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Similar filtering to copy/paste</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Prevents unauthorized transfers</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Malware protection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Keystroke Obfuscation -->
+                <div class="feature-card fade-up highlight-card" style="--delay: 0.4s">
+                    <div class="feature-header">
+                        <div class="feature-icon">⌨️</div>
+                        <div class="feature-number">04</div>
+                    </div>
+                    <h3>Keystroke Obfuscation (Garbaging)</h3>
+                    <p class="feature-description">
+                        Protects against keyloggers by injecting random keystrokes while maintaining user experience
+                    </p>
+                    
+                    <div class="implementation-details">
+                        <h4>Implementation</h4>
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span class="code-file">ImeAdapter.java</span>
+                                <span class="code-lang">Java</span>
+                            </div>
+                            <div class="code-content">
+                                <span class="code-comment">// Keystroke obfuscation</span><br>
+                                <span class="code-keyword">void</span> <span class="code-function">onKeyReceived</span>(Key key) {<br>
+                                &nbsp;&nbsp;<span class="code-function">injectRandomKeys</span>();<br>
+                                &nbsp;&nbsp;<span class="code-function">sendToRenderer</span>(key);<br>
+                                &nbsp;&nbsp;<span class="code-function">injectRandomKeys</span>();<br>
+                                &nbsp;&nbsp;<span class="code-comment">// Renderer filters garbage</span><br>
+                                }
+                            </div>
+                        </div>
+                        <div class="tech-points">
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Modified ImeAdapter.java</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Random keystroke injection</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Renderer-side filtering</span>
+                            </div>
+                            <div class="tech-point">
+                                <span class="check">✓</span>
+                                <span>Unchanged user experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-highlight">
+                        <strong>🛡️ Advanced Protection:</strong> Keystroke listeners receive obfuscated data while the renderer filters out garbage keys, ensuring seamless user interaction.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Why It Matters</span>
+                <h2>Enterprise-Grade Data Protection</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card fade-up" style="--delay: 0.1s">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Deep Integration</h3>
+                    <p>Security features built directly into Chromium codebase cannot be bypassed or disabled by users or malicious extensions.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.2s">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>Centralized Control</h3>
+                    <p>Administrators manage all security policies through Okta Dashboard, enabling organization-wide enforcement and real-time updates.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.3s">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Granular Policies</h3>
+                    <p>Domain-specific rules allow different security levels for different resources, balancing security with productivity.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.4s">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Zero Performance Impact</h3>
+                    <p>Optimized implementation ensures security checks don't compromise browser speed or user experience.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.5s">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Multi-Layer Defense</h3>
+                    <p>Combining network, application, and input-level controls creates comprehensive protection against data breaches.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.6s">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Compliance Ready</h3>
+                    <p>Meets enterprise security standards and regulatory requirements for data protection and access control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Device Verification -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card fade-up">
+                <h2>Complete Security Solution</h2>
+                <p>These features work in conjunction with hardware-backed device verification</p>
+                <a href="../android-verification-website/index.html" class="cta-button">
+                    <span class="arrow-left">←</span>
+                    Learn About Device Verification
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Enterprise Browser Security Features</p>
+            <p class="footer-subtitle">Chromium-Based Implementation | Jul 2025 – Dec 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
